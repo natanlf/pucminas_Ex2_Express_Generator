@@ -1,0 +1,13 @@
+{
+    "type": "node",
+    "request": "launch",
+    "name": "Launch Program",
+    "runtimeExecutable": "nodemon",
+    "program": "${workspaceFolder}/index.js",
+    "env": {
+        "BABEL_DISABLE_CACHE": "1",
+        "NODE_ENV": "development"
+    },
+    "console": "integratedTerminal",
+    "internalConsoleOptions": "neverOpen"
+}
