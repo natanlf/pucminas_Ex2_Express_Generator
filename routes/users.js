@@ -12,17 +12,12 @@ router.get('/', function(req, res, next) {
 
 router.post('/', (req, res) => {
   users.items.push(req.body)
-  console.log(req.body)
-  console.log(users)
   res.send('Ok!');
 })
 
-router.delete('/', (req, res) => {
-  console.log(req.body)
-  let index = users.items.findIndex(e=> e.mail == req.body.email)
-  console.log(index)
+router.delete('/:email', (req, res) => {
+  let index = users.items.findIndex(e=> e.email == req.params.email)
   users.items.splice(index, 1)
-  console.log(users)
   res.send('Ok!');
 })
 
